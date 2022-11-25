@@ -33,6 +33,11 @@ setuptools.setup(
         where='.', exclude=('checkpoints*', 'research*', 'data*', 'inference_model*', 'examples*', 'dureader*')),
     setup_requires=['cython', 'numpy'],
     install_requires=REQUIRED_PACKAGES,
+    entry_points={
+        'console_scripts': [
+            'rocketqa = rocketqa.cli:main',
+        ],
+    },
     python_requires='>=3.6',
     classifiers=[
         'Programming Language :: Python :: 3',
